@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block admin-panel %}
+    <!-- Example single danger button -->
+    <div class="btn-group">
+        <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+            Create
+        </button>
+        <div class="dropdown-menu">
+            <a class="dropdown-item" href="{% url 'home_page' %}">Главная</a>
+            <a class="dropdown-item" href="{% url 'data_info' %}">Данные</a>
+        </div>
+    </div>
+    <a href=""
+       class="btn btn-light edit"
+       style="">Edit</a>
+    <a href="" class="btn btn-danger delete"
+       style="">Delete</a>
+{% endblock %}

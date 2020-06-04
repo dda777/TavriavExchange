@@ -1,0 +1,41 @@
+{% extends 'exchange/base_index.html' %}
+
+{% block title %}
+    index page
+{% endblock %}
+
+{% block content %}
+    <h1 class="mb-5">{{ title }}</h1>
+
+    <table class="table table-hover table-dark">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            {% for name in column %}
+                <th scope="row">{{ name }}</th>
+            {% endfor %}
+            <th scope="row">Удалить</th>
+            <th scope="row">Добавить</th>
+            <th scope="row">Просмореть</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for mag in data %}
+            <tr>
+                <th scope="col">{{ mag.id }}</th>
+                <td>{{ mag.title }}</td>
+                <td>{{ mag.cod1c7 }}</td>
+                <td>{{ mag.sql_base }}</td>
+                <td>{{ mag.tr5_path }}</td>
+                <td>{{ mag.sql_server }}</td>
+                <td>{{ mag.region }}</td>
+                <td><a href="">Удалить</a></td>
+                <td><a href="">Добавить</a></td>
+                <td><a href="">Просмореть</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}
